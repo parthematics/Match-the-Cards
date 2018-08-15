@@ -10,12 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBAction func cardPressed(_ sender: UIButton) {
-        flipButton(withEmoji: "🧐", on: sender)
+    var numMoves = 0 {
+        didSet {
+            numMovesLabel.text = "Flips: \(numMoves)"
+        }
     }
     
-    @IBAction func otherCardPressed(_ sender: UIButton) {
-        flipButton(withEmoji: "🤩", on: sender)
+    @IBOutlet weak var numMovesLabel: UILabel!
+    @IBOutlet var cardButtons: [UIButton]!
+    var emojiChoices = ["🧐", "🤩", "😡", "💩", "🧐", "🤩", "😡", "💩"]
+    
+    @IBAction func cardPressed(_ sender: UIButton) {
+        numMoves += 1
+        if let cardNumber = cardButtons.index(of: sender) {
+            print("card #: \(cardNumber)")
+            flipButton(withEmoji: emojiChoices[cardNumber], on: sender)
+        } else {
+            print("Card not found")
+        }
+        
     }
     
     func flipButton(withEmoji emoji: String, on button: UIButton) {
