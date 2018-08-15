@@ -97,11 +97,9 @@
 		B2B8A21121238F01001647FC /* MatchTheCards */ = {
 			isa = PBXGroup;
 			children = (
-				B2B8A21221238F01001647FC /* AppDelegate.swift */,
+				B2B8A24021239535001647FC /* Supporting FIles */,
 				B2B8A21421238F01001647FC /* ViewController.swift */,
 				B2B8A21621238F01001647FC /* Main.storyboard */,
-				B2B8A21921238F04001647FC /* Assets.xcassets */,
-				B2B8A21B21238F04001647FC /* LaunchScreen.storyboard */,
 				B2B8A21E21238F04001647FC /* Info.plist */,
 			);
 			path = MatchTheCards;
@@ -123,6 +121,16 @@
 				B2B8A23421238F04001647FC /* Info.plist */,
 			);
 			path = MatchTheCardsUITests;
+			sourceTree = "<group>";
+		};
+		B2B8A24021239535001647FC /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				B2B8A21221238F01001647FC /* AppDelegate.swift */,
+				B2B8A21921238F04001647FC /* Assets.xcassets */,
+				B2B8A21B21238F04001647FC /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting FIles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
